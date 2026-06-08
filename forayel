@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for Ayel cintakuu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style type="text/tailwindcss">
+        @layer utilities {
+            /* Animasi teks bergerak naik dan muncul */
+            .text-animate {
+                opacity: 0;
+                transform: translateY(20px);
+                animation: moveUpFade 1.2s ease-out forwards;
+            }
+            @keyframes moveUpFade {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            /* Animasi hati melayang halus */
+            .float-heart {
+                animation: floatSlow 4s ease-in-out infinite;
+            }
+            @keyframes floatSlow {
+                0% { transform: translateY(0px); }
+                50% { transform: translateY(-8px); }
+                100% { transform: translateY(0px); }
+            }
+            /* Gradien teks elegan */
+            .text-grad {
+                background: linear-gradient(90deg, #8B4513, #5C2E5C);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        soft: {
+                            50: '#fff9f5',
+                            100: '#ffeedd',
+                            200: '#ffddc8',
+                            600: '#8B4513',
+                            800: '#4A2C2A',
+                        },
+                    },
+                    fontFamily: {
+                        display: ['Playfair Display', 'serif'],
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-soft-50 to-soft-100 min-h-screen font-sans text-soft-800">
+    <!-- Latar belakang lembut -->
+    <div class="fixed inset-0 opacity-20 pointer-events-none">
+        <div class="absolute top-20 left-1/4 w-72 h-72 bg-soft-200 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 right-1/4 w-96 h-96 bg-soft-100 rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- Konten Utama -->
+    <main class="relative z-10 container mx-auto px-6 py-20 max-w-2xl">
+        <div class="text-center mb-14">
+            <div class="flex justify-center mb-8 text-animate">
+                <div class="w-16 h-16 flex items-center justify-center rounded-full bg-white/50 text-soft-600 text-2xl float-heart shadow-sm">
+                    ❤
+                </div>
+            </div>
+
+            <h1 class="font-display text-[clamp(2.7rem,6vw,4rem)] font-semibold text-grad mb-3 text-animate" style="animation-delay: 0.3s">
+                Untuk Ayel
+            </h1>
+            <p class="text-soft-600 text-base font-light text-animate" style="animation-delay: 0.6s">
+                Sederhana, tenang, dan tulus — sama seperti perasaanku padamu
+            </p>
+        </div>
+
+        <!-- Kartu Pesan -->
+        <div class="bg-white/30 backdrop-blur-lg rounded-[2rem] shadow-md p-8 md:p-10 border border-white/40">
+            <div class="space-y-6 text-center text-lg md:text-xl leading-relaxed">
+                
+                <p class="text-animate" style="animation-delay: 0.9s">
+                    Hai Ayel...
+                </p>
+
+                <p class="text-animate" style="animation-delay: 1.2s">
+                    I created this page especially for you. Not for anything fancy, but simply to convey one simple thing: how much you mean to me.
+                </p>
+
+                <p class="text-animate" style="animation-delay: 1.5s">
+                    Since you arrived, everything feels lighter and more beautiful. You bring a calmness I can't describe, and your mere presence is enough to make my day complete.
+                </p>
+
+                <p class="text-animate" style="animation-delay: 1.8s">
+                    I love everything about you. The way you see the world, the way you smile, and the way you are yourself. To me, Ayel is one of the most beautiful gifts I've ever had.
+                </p>
+
+                <p class="text-animate" style="animation-delay: 2.1s">
+                    Thank you for sticking around, for understanding, and for being my home. I promise to always be there, to accompany you, and to cherish this feeling forever.
+                </p>
+
+                <div class="mt-10 pt-6 border-t border-soft-200/50 text-animate" style="animation-delay: 2.4s">
+                    <p class="font-display text-2xl md:text-3xl font-medium text-soft-800">
+                        You are my favorite person in my life story 
+                    </p>
+                    <p class="text-soft-600 mt-2 text-base">
+                        forever ayel, buby
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-10 opacity-70 text-animate" style="animation-delay: 2.7s">
+            <p class="text-sm text-soft-700">Even though it's made simply, it uses effort for my beloved</p>
+        </div>
+    </main>
+
+    <!-- SUARA LATAR (BISA DIUBAH) -->
+    <audio id="bgMusic" autoplay loop>
+        <!-- Ganti tautan di bawah ini dengan tautan lagu kesukaanmu/Ayel -->
+        <source src="https://www.freeconvert.com/id/convert/video-to-mp3" type="audio/mpeg">
+        Browser kamu tidak mendukung pemutar audio.
+    
+
+    <!-- Tombol Kontrol Suara -->
+    <div class="fixed bottom-6 right-6 z-20">
+        <button onclick="toggleSound()" class="w-12 h-12 rounded-full bg-white/60 backdrop-blur-sm shadow flex items-center justify-center text-soft-600 hover:bg-white/80 transition">
+            <svg id="soundIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 0a.5.5 0 0 1 .5.5v15a.5.5 0 0 1-1 0V.5A.5.5 0 0 1 8 0z"/>
+                <path d="M10.25 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0v-8a.5.5 0 0 1 .5-.5zm-4.5 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0v-8a.5.5 0 0 1 .5-.5z"/>
+            </svg>
+        </button>
+    </div>
+
+    <script>
+        // Fungsi mengaktifkan/mematikan suara
+        function toggleSound() {
+            const audio = document.getElementById('bgMusic');
+            const icon = document.getElementById('soundIcon');
+            if (audio.muted) {
+                audio.muted = false;
+                icon.innerHTML = '<path d="M8 0a.5.5 0 0 1 .5.5v15a.5.5 0 0 1-1 0V.5A.5.5 0 0 1 8 0z"/><path d="M10.25 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0v-8a.5.5 0 0 1 .5-.5zm-4.5 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0v-8a.5.5 0 0 1 .5-.5z"/>';
+            } else {
+                audio.muted = true;
+                icon.innerHTML = '<path d="M .5 3a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-10z"/><path d="M7.25 3a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-10z"/>';
+            }
+        }
+
+        // Solusi agar suara otomatis berbunyi di HP/komputer
+        document.addEventListener('click', () => {
+            const audio = document.getElementById('bgMusic');
+            if (audio.paused) audio.play();
+        }, { once: true });
+    </script>
+</body>
+</html>
